@@ -1,0 +1,11 @@
+@EndUserText.label: 'Objeto de Autorização em CDS'
+@MappingRole: true
+define role ZAC_MAGF_M3A4 {
+    grant 
+        select
+            on
+                ZCDS_MAGF_M2A2
+                    where
+                        (Carrid) = aspect pfcg_auth(ZTST_AUTH, ZFLD_AUTH3, ACTVT = '03');
+                        
+}
